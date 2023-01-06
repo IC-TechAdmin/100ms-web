@@ -64,8 +64,6 @@ export const StreamingFooter = () => {
         </Flex>
       </AppFooter.Center>
       <AppFooter.Right>
-        <MetaActions />
-        <ChatToggle />
       </AppFooter.Right>
     </AppFooter.Root>
   );

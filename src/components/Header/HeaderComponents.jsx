@@ -53,9 +53,21 @@ export const Logo = () => {
   const isMobile = useMedia(cssConfig.media.md);
   const isConnected = useHMSStore(selectIsConnectedToRoom);
   // Hide logo for now as there is not enough space
-  // if (isConnected && isMobile && isStreamingKit()) {
-  //   return null;
-  // }
+  if (isConnected && isMobile && isStreamingKit()) {
+    return (
+    <LogoImg
+      src={
+        logo ||
+        (themeType === "dark"
+          ? require("../../images/logo-light.svg")
+          : require("../../images/logo-dark.svg"))
+      }
+      alt="Brand Logo"
+      width={264}
+      height={80}
+    />
+    );
+  }
   return (
     <LogoImg
       src={

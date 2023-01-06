@@ -63,8 +63,8 @@ export const Logo = () => {
           : require("../../images/logo-dark.svg"))
       }
       alt="Brand Logo"
-      width={264}
-      height={80}
+      width={2640}
+      height={800}
     />
     );
   }

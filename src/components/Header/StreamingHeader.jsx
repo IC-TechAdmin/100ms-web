@@ -34,14 +34,6 @@ export const StreamingHeader = ({ isPreview }) => {
           gap: "$4",
         }}
       >
-        {isMobile ? (
-          <MetaActions compact />
-        ) : (
-          <Flex css={{ gap: "$4" }}>
-            <StreamActions />
-          </Flex>
-        )}
-        <ParticipantCount />
       </Flex>
     </Flex>
   );

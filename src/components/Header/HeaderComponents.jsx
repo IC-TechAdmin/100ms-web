@@ -47,6 +47,15 @@ const LogoImg = styled("img", {
   },
 });
 
+const LogoImgMobile = styled("img", {
+  maxHeight: "$140",
+  p: "$20",
+  w: "auto",
+  "@md": {
+    maxHeight: "$120",
+  },
+});
+
 export const Logo = () => {
   const { themeType } = useTheme();
   const logo = useLogo();
@@ -55,7 +64,7 @@ export const Logo = () => {
   // Hide logo for now as there is not enough space
   if (isConnected && isMobile && isStreamingKit()) {
     return (
-    <LogoImg
+    <LogoImgMobile
       src={
         logo ||
         (themeType === "dark"

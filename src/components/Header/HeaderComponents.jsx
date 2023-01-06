@@ -48,11 +48,11 @@ const LogoImg = styled("img", {
 });
 
 const LogoImgMobile = styled("img", {
-  maxHeight: "$140",
-  p: "$20",
+  maxHeight: "$30",
+  p: "$5",
   w: "auto",
   "@md": {
-    maxHeight: "$120",
+    maxHeight: "$25",
   },
 });
 

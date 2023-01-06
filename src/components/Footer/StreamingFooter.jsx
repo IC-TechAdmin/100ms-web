@@ -52,7 +52,6 @@ export const StreamingFooter = () => {
         >
           <StreamActions />
         </Box>
-        <MoreSettings />
         <Box css={{ "@md": { display: "none" } }}>
           <LeaveRoom />
         </Box>
@@ -60,10 +59,11 @@ export const StreamingFooter = () => {
           align="center"
           css={{ display: "none", "@md": { display: "flex" } }}
         >
-          <ChatToggle />
         </Flex>
       </AppFooter.Center>
       <AppFooter.Right>
+      <MetaActions />
+      <ChatToggle />
       </AppFooter.Right>
     </AppFooter.Root>
   );

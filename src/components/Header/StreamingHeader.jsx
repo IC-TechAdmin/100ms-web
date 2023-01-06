@@ -23,13 +23,6 @@ export const StreamingHeader = ({ isPreview }) => {
         }}
       >
         <Logo />
-        {isMobile && (
-          <Flex align="center" gap={2}>
-            <LeaveRoom />
-            <LiveStatus />
-            <RecordingStatus />
-          </Flex>
-        )}
         {!isPreview ? <SpeakerTag /> : null}
       </Flex>
 

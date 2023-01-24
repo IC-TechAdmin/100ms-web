@@ -44,7 +44,7 @@ const ScreenShareView = () => {
       css={{
         size: "100%",
       }}
-      direction={showSidebarInBottom ? "column" : "row"}
+      direction="column"
     >
       <ScreenShareComponent
         amIPresenting={amIPresenting}
@@ -133,9 +133,9 @@ const ScreenShareComponent = ({
   return (
     <Box
       css={{
-        flex: "3 1 0",
+        flex: "2 1 0",
+	minHeight: 0,	
         mx: "$8",
-        "@lg": { ml: "$4", maxHeight: "80%" },
       }}
     >
       {peerPresenting &&

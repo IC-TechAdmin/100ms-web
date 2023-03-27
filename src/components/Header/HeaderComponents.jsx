@@ -47,6 +47,15 @@ const LogoImg = styled("img", {
   },
 });
 
+const LogoImgMobile = styled("img", {
+  maxHeight: "$22",
+  p: "$4",
+  w: "auto",
+  "@md": {
+    maxHeight: "$20",
+  },
+});
+
 export const Logo = () => {
   const { themeType } = useTheme();
   const logo = useLogo();
@@ -54,7 +63,19 @@ export const Logo = () => {
   const isConnected = useHMSStore(selectIsConnectedToRoom);
   // Hide logo for now as there is not enough space
   if (isConnected && isMobile && isStreamingKit()) {
-    return null;
+    return (
+    <LogoImgMobile
+      src={
+        logo ||
+        (themeType === "dark"
+          ? require("../../images/logo-light.svg")
+          : require("../../images/logo-dark.svg"))
+      }
+      alt="Brand Logo"
+      width={2640}
+      height={800}
+    />
+    );
   }
   return (
     <LogoImg

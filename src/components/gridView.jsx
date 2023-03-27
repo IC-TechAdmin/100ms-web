@@ -7,7 +7,7 @@ import VideoList from "./VideoList";
 import { useAppConfig } from "./AppData/useAppConfig";
 import { useIsHeadless } from "./AppData/useUISettings";
 
-const MAX_TILES_FOR_MOBILE = 4;
+const MAX_TILES_FOR_MOBILE = 10;
 
 /**
  * the below variables are for showing webinar etc. related image if required on certain meeting urls
